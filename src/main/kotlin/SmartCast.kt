@@ -9,8 +9,8 @@ fun main(args: Array<String>) {
 
 interface Expressao
 class Number(val valor: Int): Expressao
-class Soma(val esquerdo: Expressao , val direito: Expressao): Expressao
-class Subtracao(val primeiro: Expressao , val segundo: Expressao): Expressao
+class Soma(val esquerdo: Expressao, val direito: Expressao): Expressao
+class Subtracao(val primeiro: Expressao, val segundo: Expressao): Expressao
 
 fun avaliacao(expressao: Expressao): Int {
     if(expressao is Number) {
