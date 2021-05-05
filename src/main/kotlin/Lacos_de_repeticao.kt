@@ -7,8 +7,26 @@ fun main(args: Array<String>){
 
     //println( While_Sample())
     //println( Do_While_Sample())
-    For_Sample()
+    //For_Sample()
+    //iteratorArrayFor()
+    iteratorArrayWhile()
+    //ontandoComFor()
+    //contandoComForDeTrazPraFrente()
 }
+
+fun contandoComFor() {
+    for (num in 1..100){
+        print("${num} ")
+    }
+}
+fun contandoComForDeTrazPraFrente() {
+    var numero = 100
+    for (num in 1..numero){
+        print(" ${numero} ")
+        numero -= 1
+    }
+}
+
 
 fun While_Sample(): String{
     var temp: Int = 0
@@ -59,4 +77,20 @@ fun fizzBuzz(numero: Int) = when{
     numero % 3 == 0 -> "Fizz "
     numero % 5 == 0 -> "Buzz"
     else -> "$numero"
+}
+
+//iterando um array com for
+fun iteratorArrayFor(){
+    val numberArray = Array(4,{ i->i*2})
+    for ( i in numberArray[0] until numberArray.size){
+        println(numberArray[i])
+    }
+}
+//iterando um array com while
+fun iteratorArrayWhile() {
+    val numberArray = Array(4) { i -> i * 5 }
+    val numberInterator = numberArray.iterator()
+    while (numberInterator.hasNext()) {
+        println(numberInterator.next())
+    }
 }
